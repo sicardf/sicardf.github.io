@@ -1,0 +1,235 @@
+:root {
+    --background-color: #FFFFFF;
+    --primary-color: #204ECF;
+    --primary-label-color: #101214;
+    --secondary-color: #324150;
+    --tertiary-color: #73808D;
+    --background-card-color: #FBFBFE;
+    --dot-color: #C6CDEB;
+}
+
+.container-profile {
+    position: relative; /* Permet de positionner les éléments enfants par rapport à ce conteneur */
+    width: 128px;
+    height: 128px;
+}
+    
+.circle-container {
+    position: absolute;
+    top: 87px;
+    left: 87px;
+    width: 49px;
+    height: 49px;
+    border-radius: 50%; /* Crée un cercle en utilisant une valeur de 50% */
+    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.circle-image {
+    width: 33px;
+    height: 33px;
+}
+
+.profile-image {
+    width: 128px;
+    height: 128px;
+}
+
+body {
+    margin: 0;
+    position: relative;
+    background-color: var(--background-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: white;
+    height: 48px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+}
+
+footer {
+    color: var(--tertiary-label, var(--tertiary-color));
+    font-family: Avenir;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: normal;
+    padding-bottom: 32px;
+}
+
+.root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-left: 48px;
+    padding-right: 48px;
+    padding-bottom: 0px;
+}
+
+.content {
+    flex: 1; /* This allows the content to expand and push the footer to the bottom */
+    padding-top: 72px;
+    padding-bottom: 40px; /* Add some padding at the bottom to prevent the footer from overlapping the content */
+}
+
+.test {
+    margin-bottom: 32px;
+}
+
+ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  margin: 5px 0;
+}
+
+p {
+    color: var(--primary, var(--primary-color));
+    font-family: Avenir;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    margin: 0px;
+}
+
+p.subtitle {
+    color: var(--tertiary-label, var(--primary-label-color));
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 3.84px;
+    text-transform: uppercase;
+    -webkit-font-smoothing: antialiased;
+}
+
+p.title {
+    color: var(--primary-label, #101214);
+    font-family: Avenir;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+}
+
+p.date {
+    color: var(--secondary-label, var(--secondary-color));
+    font-family: Avenir;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+p.contentt {
+    color: var(--secondary-label, var(--secondary-color));
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+/* Style pour les boutons */
+.button {
+    display: block;
+
+    background: var(--primary-color);
+    display: inline-flex;
+    padding: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    align-items: center;
+    gap: 4px;
+
+    color: #FFF;
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 400px) {
+    /* Lorsque l'écran a une largeur maximale de 768px, réduisez la taille de police */
+    p {
+        font-size: 30px;
+    }
+    
+    p.subtitle {
+        font-size: 12px;
+    }
+}
+
+.button:hover {
+    color: var(--tertiary-label, var(--primary-color));
+}
+
+.buttonBis {
+    display: block;
+    color: var(--tertiary-label, var(--tertiary-color));
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 3.84px;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.buttonBis:hover {
+    color: var(--tertiary-label, var(--primary-color));
+}
+
+.buttonTer {
+    display: block;
+    color: var(--tertiary-label, var(--tertiary-color));
+    font-family: Avenir;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.buttonTer:hover {
+    color: var(--tertiary-label, var(--primary-color));
+}
+
+.card {
+    background-color: var(--background-card-color);
+    background-image: radial-gradient(var(--dot-color) 0.8px, var(--background-card-color) 0.8px);
+    background-size: 16px 16px;
+    padding: 16px;
+    margin-bottom: 32px;
+    max-width: 768px;
+    justify-content: space-between;
+}
+
+.cardMini {
+    background-color: var(--background-card-color);
+    background-image: radial-gradient(var(--dot-color) 0.8px, var(--background-card-color) 0.8px);
+    background-size: 16px 16px;
+    padding: 16px;
+    margin-bottom: 32px;
+    max-width: 384px;
+    justify-content: space-between;
+}
